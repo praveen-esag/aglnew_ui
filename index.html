@@ -33,6 +33,32 @@
                             </button>
                         </div>
                         <div class="mainNav">
+                            <div class="navHead d-lg-none d-flex">
+                                <div class="toggleClose d-none">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="logo">
+                                    <a href="#">
+                                        <img src="assets/images/agl_logo.svg" alt="Logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="searchBox d-lg-none d-block">
+                                <div class="searchForm contactForm">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" name="search" id="search" placeholder="Search">
+                                            <!-- <label for="search">First Name*</label> -->
+                                        </div>
+                                        <div class="form-footer">
+                                            <button type="submit" class="searchSubmit">
+                                                <img src="assets/images/search_icon.svg" alt="Search icon">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <ul>
                                 <li><a href="#">kitchens</a></li>
                                 <li><a href="#">wardrobeS</a></li>
@@ -42,6 +68,14 @@
                                 <li><a href="#">Catalogue</a></li>
                                 <li><a href="#">about</a></li>
                             </ul>
+                            <div class="innerIcons d-lg-none d-flex">
+                                <a href="#" aria-label="Location">
+                                    <img src="assets/images/location_icon.svg" alt="Location"></a>
+                                <a href="#" class="mobile-toggle" aria-label="Menu">
+                                    <img src="assets/images/calendar_icon.svg" alt="Calendar"></a>
+                                <a href="#" class="mobile-toggle" aria-label="Menu">
+                                    <img src="assets/images/mail_icon.svg" alt="Email"></a>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -53,15 +87,18 @@
                 </div>
                 <div class="col-md-4 col-4">
                     <div class="headerIcons topHome">
-                        <a href="#" aria-label="Search">
+                        <a href="#" class="d-none d-lg-block" aria-label="Search">
                             <img src="assets/images/search_icon.svg" alt="Search">
                         </a>
                         <a href="#" aria-label="Location">
-                            <img src="assets/images/location_icon.svg" alt="Location"></a>
-                        <a href="#" class="mobile-toggle" aria-label="Menu">
-                            <img src="assets/images/calendar_icon.svg" alt="Calendar"></a>
-                        <a href="#" class="mobile-toggle" aria-label="Menu">
-                            <img src="assets/images/mail_icon.svg" alt="Email"></a>
+                            <img src="assets/images/location_icon.svg" alt="Location">
+                        </a>
+                        <a href="#" aria-label="Menu">
+                            <img src="assets/images/calendar_icon.svg" alt="Calendar">
+                        </a>
+                        <a href="#" class="d-none d-lg-block" aria-label="Menu">
+                            <img src="assets/images/mail_icon.svg" alt="Email">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -591,7 +628,20 @@
             </div>
             <div class="row">
                 <div class="footerBottom px-0">
-                    <div class="footNavCol">
+                    <div class="footerToggler">
+                        <button id="toggleSitemap" class="sitemap-btn">Show Sitemap</button>
+                        <!-- <div class="hideShowLink">
+                            <button class="show">
+                                Show sitemap 
+                                <img src="assets/images/search_icon.svg" alt="Show icon">
+                            </button>
+                            <button class="hide">
+                                Hide sitemap 
+                                <img src="assets/images/search_icon.svg" alt="Show icon">
+                            </button>
+                        </div> -->
+                    </div>
+                    <div id="footSitemap" class="footNavCol">
                         <div class="navList">
                             <ul>
                                 <li><a href="#">Brands</a></li>

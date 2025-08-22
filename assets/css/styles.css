@@ -2929,7 +2929,7 @@ img {
 
     .awardInfo .awardLogos {
         gap: 45px;
-        padding-top: 50px;
+        /* padding-top: 50px; */
     }
 
     .awardDesc {
@@ -3461,7 +3461,7 @@ img {
 }
 
 @media (min-width: 1440px) {
-    .awardLogos .swiper-wrapper {
+    .awardInfo .awardLogos .swiper-wrapper {
         gap: 95px;
     }
 
@@ -3581,8 +3581,156 @@ img {
 
 @media (max-width: 991px) {
 
+    /* Mobile toggle menu styles start */
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .toggleIcon {
+        width: 22px;
+        height: 16px;
+        position: relative;
+    }
+
+    .toggleIcon.open span {
+        background-color: #000;
+        height: 2px;
+    }
+
+    .toggleIcon.open span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .toggleIcon.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggleIcon.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .mainNav.open {
+        left: 0;
+        max-height: initial;
+    }
+
+    .mainNav {
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        top: -27px;
+        left: -100%;
+        right: 0;
+        background: #EFEDE8;
+        padding: 28px 30px;
+        transition: .3s ease-in-out;
+        z-index: 10;
+    }
+
+    .mainNav .navHead {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    .mainNav .navHead .toggleClose {
+        position: absolute;
+        top: auto;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .mainNav .navHead .toggleClose span {
+        display: block;
+        height: 2px;
+        background: #333;
+        border-radius: 1px;
+        width: 20px;
+        transform: rotate(45deg);
+    }
+
+    .mainNav .navHead .toggleClose span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mainNav .navHead .toggleClose span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .searchForm.contactForm {
+        position: relative;
+    }
+
+    .searchForm.contactForm input#search {
+        padding-left: 30px;
+    }
+
+    .contactForm button[type="submit"].searchSubmit {
+        background-color: transparent;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        padding: 0px;
+    }
+
+    .mainNav ul {
+        padding-left: 0px;
+        padding-bottom: 50px;
+        gap: 34px;
+    }
+
+    .mainNav.open ul li a {
+        color: #545454;
+        font-size: 18px;
+    }
+
+    .mainNav .innerIcons {
+        display: flex;
+        align-items: center;
+    }
+
+    .mainNav .innerIcons a {
+        /* flex: 0 0 20%; */
+        border-right: 1px solid #000;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .mainNav .innerIcons a:first-child {
+        padding-left: 0px;
+    }
+
+    .mainNav .innerIcons a:last-child {
+        border-right: 0px;
+    }
+
+    .mainNav .innerIcons a img {
+        height: 25px;
+        object-fit: cover;
+    }
+
+    .mainHeader.is_sticky .mainNav.open {
+        top: 0;
+    }
+
+    .mainHeader.is_sticky .toggleIcon.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px)
+    }
+
+    /* Mobile toggle menu styles end */
+
     .container-fluid.headerInner {
-        padding-left: 0pc;
+        padding-left: 0px;
         padding-right: 0px;
         max-width: 90%;
     }
@@ -3602,9 +3750,13 @@ img {
 
     /* Header styles */
 
-    .headerIcons,
+    /* .headerIcons, */
     .bannerSec .bannerVid::before {
         display: none;
+    }
+
+    .headerIcons.topHome {
+        top: 10px;
     }
 
     /* Header styles */
@@ -4532,6 +4684,36 @@ img {
         display: none;
     }
 
+    /* Footer toggler styles */
+
+    .footerToggler {
+        padding-bottom: 10px;
+    }
+
+    .footerBottom .footNavCol {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .footerBottom .footNavCol.active {
+        max-height: 500px;
+    }
+
+    .footerToggler button {
+        text-align: center;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        font-family: 'Archivo';
+        border: none;
+        background: transparent;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    /* Footer toggler styles */
+
     /* Footer styles */
 }
 
@@ -4577,6 +4759,29 @@ img {
 }
 
 @media (max-width: 380px) {
+
+    /* Mobile toggle menu styles */
+
+    .searchForm.contactForm input#search {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    .searchForm.contactForm button[type="submit"] {
+        top: 2px;
+    }
+
+    .mainNav ul {
+        gap: 20px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .mainNav.open ul li a {
+        font-size: 16px;
+    }
+
+    /* Mobile toggle menu styles */
 
     .mainTitle,
     .vktextCol .titleArea .secTitle {
@@ -4630,6 +4835,10 @@ img {
 
     .stepCard .stepTitle {
         font-size: 40px;
+    }
+
+    .footerCompany .logo img {
+        width: 110px;
     }
 }
 

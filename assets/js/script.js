@@ -2,7 +2,12 @@
 document.querySelector('.toggleIcon').addEventListener('click', function () {
   this.classList.toggle('open');
   document.querySelector('.mainNav').classList.toggle('open'); // toggle your nav visibility
+  document.body.classList.toggle("menu-open");
 });
+// document.querySelector('.toggleClose').addEventListener('click', function () {
+//   this.classList.toggle('open');
+//   document.querySelector('.mainNav').classList.toggle('open'); // toggle your nav visibility
+// });
 
 // Sticky header function
 window.addEventListener("scroll", function () {
@@ -195,3 +200,17 @@ window.addEventListener("resize", awardsSwiperCard);
 // }
 // projectSwiperCard();
 // window.addEventListener("resize", projectSwiperCard);
+
+// Hide and show sitemap in the footer
+const toggleBtn = document.getElementById("toggleSitemap");
+const sitemap = document.getElementById("footSitemap");
+
+toggleBtn.addEventListener("click", () => {
+  sitemap.classList.toggle("active");
+
+  if (sitemap.classList.contains("active")) {
+    toggleBtn.textContent = "Hide Sitemap";
+  } else {
+    toggleBtn.textContent = "Show Sitemap";
+  }
+});
