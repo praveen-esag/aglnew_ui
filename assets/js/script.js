@@ -149,8 +149,8 @@ function awardsSwiperCard() {
         // centeredSlides: true,
         spaceBetween: 45,
         breakpoints: {
-          769: {
-            slidesPerView: 2.8,
+          768: {
+            slidesPerView: 3.8,
             spaceBetween: 25,
           },
         },
